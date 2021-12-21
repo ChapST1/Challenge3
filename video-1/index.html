@@ -7,12 +7,16 @@
     <title></title>
     <link rel="stylesheet" href="/video-1/style.css">
     <script src="https://kit.fontawesome.com/c5505b9c6b.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+     <link href="video-1/index.css" rel="stylesheet" />
+   
+     
 </head>
 
 <body>
   
      <header class="header">
-      <i class="fas fa-search"></i>
+      <i id="search" class="fas fa-search"></i>
       <h2 class="header__title">
         Z-Media-Player
       </h2>
@@ -23,41 +27,136 @@
       <!--menu-->
       <nav class="nav">
         <ul class="nav__ul">
-          <li class="nav__li" id="">
-            <a href="#" class="nav__a">Inicio</a>
-          </li>
-          <li class="nav__li" id="">
-            <a href="#" class="nav__a">Categorias</a>
-          </li>
-          <li class="nav__li" id="">
-            <a href="#" class="nav__a">Top</a>
-          </li>
-          <li class="nav__li" id="">
-            <a href="#" class="nav__a">Nosotros</a>
-          </li>
-          <li class="nav__li" id="">
-            <a href="#" class="nav__a">Soporte</a>
-          </li>
+             <li class="nav__li" id="">
+               <i class="fas fa-home"></i>
+               <a href="#" class="nav__a">Inicio</a>
+             </li>
+             <li class="nav__li" id="">
+               <i class="fas fa-folder"></i>
+               <a href="#" class="nav__a">Categorias</a>
+             </li>
+             <li class="nav__li" id="">
+               <i class="fas fa-trophy"></i>
+               <a href="#" class="nav__a">Top</a>
+             </li>
+             <li class="nav__li" id="">
+               <i class="fas fa-users"></i>
+               <a href="#" class="nav__a">Nosotros</a>
+             </li>
+             <li class="nav__li" id="">
+               <i class="fas fa-question-circle"></i>
+               <a href="#" class="nav__a">Soporte</a>
+             </li>
         </ul>
       </nav>
     </header>
     <section class="contenido">
+    <!--
       <iframe src="//sendvid.com/embed/r6hmymr4" frameborder="0" allowfullscreen></iframe>
+    -->  
+<div class="player">
+      <video
+        id="sea-video"
+        class="video-js vjs-theme-sea"
+        controls
+        preload="auto"
+        poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-tLhveWyAbk25kXL_XfLooj1yHDS_eIOdAQ&usqp=CAU"
+        data-setup='{ "fluid": true }'
+      >
+        <source
+          src="/mediaV/video1.mp4"
+          type="application/x-mpegurl"
+        />
+        
+      </video>
+    </div>
+   </div>
+    <script src="https://vjs.zencdn.net/7.6.0/video.js"></script>
+     
+      
+      
+      
+      
       <div class="descripcion">
        <h2 class="descripcion__title">
-         Titulo del video
+         Mario Racista
        </h2>
        <div class="descripcion__votacion">
-          <i class="fas fa-heart"></i>
-          <i class="fas fa-heart-broken"></i>
+          <i id="heart" class="fas fa-heart"></i>
+          <i id="heartBroken" class="fas fa-heart-broken"></i>
        </div>
       </div>
+      <div id="info" class="descripcion__video">
+         <h5 id="more" class="descripcion__video__subtitle">mas informacion...</h5>
+         
+         <p class="descripcion__video__text">
+            En este corto observamos a un mario con un particular cambio de humor por culpa de los personajes de otras plataformas de videojuegos entre los personajes destacan kratos que esta mamadisimo y super Crazy y otros personajes como sonic, luigi, nuggels etc.
+         </p>
+         
+         <div class="descripcion__generos">
+          <button class="descripcion__generos__btn">Humor</button>
+          
+          <button class="descripcion__generos__btn">Game</button>
+          
+          <button class="descripcion__generos__btn">Parodia</button>
+         </div>
+         
+       </div>
+
+      <section class="videos">
+         <div class="video1 video2">
+            <img class="video__post" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BvPSCF29YT4u3goQ4sgag9TibSf5gE0j5Q&usqp=CAU" alt="">
+             <span class="ball ball1"></span>
+             <span class="ball ball2"></span>
+             <span class="ball ball3"></span>
+     <i class="far fa-play-circle"></i>
+       <div class="video__descripcion">
+          <p class="video__title">
+                Prueba 2
+            </p>
+        </div>
+    </div>
+    
+    <div class="video1 video3">
+        <img class="video__post" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFn6htvdsO2W28gwRgXXoeDtX_TQoKW912IQ&usqp=CAU" alt="">
+        <span class="ball ball1"></span>
+        <span class="ball ball2"></span>
+        <span class="ball ball3"></span>
+      <i class="far fa-play-circle"></i>
+       <div class="video__descripcion">
+         <p class="video__title">
+                Prueba 3
+          </p>
+        </div>
+    </div>
+    
+      <div class="video1 video4">
+          <img class="video__post" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hmg0_lqAP-X5mDh0IgmrooWmNZh-ldNhpw&usqp=CAU" alt="">
+          <span class="ball ball1"></span>
+          <span class="ball ball2"></span>
+          <span class="ball ball3"></span>
+        <i class="far fa-play-circle"></i>
+        <div class="video__descripcion">
+          <p class="video__title">
+            Prueba 4
+          </p>
+        </div>      
+      </div> 
+          
+        
+      </section>
     </section>
     
-    
+  <footer class="footer">
+    <p class="footer__text">
+      © Z-MediaPlayer 2021
+    </p>
+  </footer>
+  
     
     
     <script src="/script.js"></script>
+    
 </body>
 
 </html>
