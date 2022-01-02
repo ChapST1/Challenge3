@@ -17,7 +17,7 @@
 .header{
   width: 100%;
   height: 80px;
-  background-color: #241246;
+  background-color: #19172F;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
 }
 #search{
   font-size: 25px;
-  color: #aaa;
+  color: #9D7Ab0;
   
 }
 .header__title{
@@ -46,7 +46,7 @@ label{
 .bars{
   width: 80%;
   height: 2px;
-  background-color: #aaa;
+  background-color: #9D7Ab0;
   position: absolute;
   transition: .5s;
 }
@@ -54,7 +54,7 @@ label{
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #aaa;
+  background-color: #9D7Ab0;
   transition: .5s;
   position: absolute;
 }
@@ -135,7 +135,7 @@ label{
 .nav__li::after{
   content: "";
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #9D7Ab0;
   position: absolute;
   right: 0;
@@ -182,7 +182,7 @@ font-family: 'Glory', sans-serif;
 .descripcion{
   width: 100%;
   height: 70px;
-  background-color: #241246;;
+  background-color: #19172F;;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,14 +254,13 @@ font-family: 'Glory', sans-serif;
 }
 .descripcion__video__text{
   width: 100%;
+  height: 130px;
   color: #9D7Ab0;
   margin: 15px 0;
-  padding: 5px 10px;
 }
 .descripcion__generos{
   width: 100%;
   height: 80px;
-  padding: 5px;
 }
 .descripcion__generos__btn{
   border: none;
@@ -269,7 +268,7 @@ font-family: 'Glory', sans-serif;
   color: #9D7Ab0;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #241246;
+  background-color: #19172F;
   margin: 1px;
   transition: .5s;
 }
@@ -277,7 +276,6 @@ font-family: 'Glory', sans-serif;
   background-color: #9D7Ab0;
   color: #241246;
 }
-
 
 /* Contenido */
 .ball{
@@ -342,8 +340,7 @@ video{
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgba(53,21,68,0.77);
-  color: rgba(71, 32, 94, 0.7);
+  background-color: rgba(25, 23, 47, 0.85);
   backdrop-filter: blur(5px);
   z-index: 1700;
   opacity: 0;
@@ -397,7 +394,7 @@ font-family: 'Glory', sans-serif;
 .footer {
   width: 100%;
   height: 100px;
-  background-color: #241246;
+  background-color: #19172F;
   color: #9D7Ab0;
   display: flex;
   align-items: center;

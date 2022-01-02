@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Glory:wght@500&display=swap');
 
+
 *{
   padding: 0;
   margin: 0;
@@ -11,16 +12,6 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/*Seccion 2*/
-
-
-.seccion-2{
-  width: 100%;
-  padding-bottom: 1px;
-  background-color: #121119;
-  position: relative;
-  overflow: hidden;
-}
 #btn{
   display: none;
 }
@@ -33,17 +24,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
- 
+  z-index: 5000;
   
 }
 #btn-busqueda{
   font-size: 25px;
   color: #9D7Ab0;
-  transition: .5s;
-}
-#btn-busqueda:hover{
-    font-size: 25px;
-    color: #9D7Ab0;
 }
 .header__title{
   color: #9D7Ab0;
@@ -102,7 +88,7 @@ label{
   top: 80px;
   left: 0%;
   transition: .4s;
-  z-index: 1000;
+  z-index: 4000;
   display: none;
   
 }
@@ -161,7 +147,6 @@ label{
 .nav__li__active::after{
   transform: scale(1);
 }
-
 .nav__li:hover:after{
   transform: scale(1);
 }
@@ -180,143 +165,61 @@ label{
 font-family: 'Glory', sans-serif;
 
 }
-
-.nav__a__active{
-  color:#9D7Ab0; 
-}
 .nav__a:hover{
+  color: #9D7Ab0;
+}
+.nav__a:active{
+  color: #9D7Ab0;
+}
+.nav__a__active{
   color: #9D7Ab0;
 }
 
 #btn:checked ~ .nav{
   display: block;
 }
-
-/* Contenido */
-.ball{
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #361745;
-  margin: 2px;
-  position: relative;
-  z-index: 100;
+.contenido{
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #111019;
 }
-.ball1{
-  animation: balls1 1s alternate infinite;
-}
-.ball2{
-  animation: balls2 1s alternate infinite;
-  animation-delay: .5s;
-  
-}
-.ball3{
-  animation: balls3 1s alternate infinite;
-  animation-delay: 1s;
-}
-@keyframes balls1{
-  from{
-    transform: scale(1.1);
-    background-color: #4D3C56;
-  }
-  
-}
-@keyframes balls2{
-  from{
-    transform: scale(1.2);
-    background-color: #4D3C56;
-  }
- 
-}
-@keyframes balls3{
-  from{
-    transform: scale(1.3);
-    background-color: #4D3C56;
-  }
-}
-.video1,.video2,.video3,.video4{
+.contenido__botones__1{
   width: 95%;
-  height: 200px;
-  margin: 10px auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 120;
+  height: 150px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  transform: translateY(50px);
 }
-.video1::after{
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color:rgba(25,23,47,0.85);
-  /*rgba(53,21,68,0.77);*/
-  color: rgba(71, 32, 94, 0.7);
-  backdrop-filter: blur(5px);
-  z-index: 1600;
-  opacity: 0;
+.contenido__btns{
+  padding: 20px 35px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #9D7Ab0;
+  color: #9D7Ab0;
+  border-radius: 5px;
   transition: .5s;
+}
+.contenido__btns:hover{
+  transform: scale(1.1);
+  background-color: #9D7Ab0;
+  color: #111019;
+  border: inset #111019;
 }
 
 
-.video1:hover:after{
-  opacity: 1;
-}
-.fa-play-circle{
-  position: absolute;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
-  font-size: 40px;
-  z-index: 1756;
-  transform: scale(0);
-  display: none;
-  transition: .5s;
-  color: #9D7Ab0;
-}
-.video1:hover .fa-play-circle {
-  display: block;
-  transform: scale(2.0);
-}
-.video__post{
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  object-fit: cover;
-}
-.video__descripcion{
-  width: 100%;
-  padding: 10px 5px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(17,16,25,0.47);
-  color: #aaa;
-  transform: translateY(100px);
-  transition: .5s;
-  z-index: 1700;
- font-family: 'Abel', sans-serif;
-font-family: 'Glory', sans-serif;
-}
-.video1:hover .video__descripcion{
-  transform: translateY(0%);
-  
-}
-.footer{
-  width: 100%;
-  height: 100px;
-  background-color: #19172F;
-  color: #9D7Ab0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: 'Berkshire Swash', cursive;
-}
+.footer {
+   width: 100%;
+   height: 100px;
+   background-color: #19172F;
+   color: #9D7Ab0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   font-weight: 500;
+   font-family: 'Berkshire Swash', cursive;
+  }

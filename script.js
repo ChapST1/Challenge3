@@ -21,4 +21,3 @@ corazonRoto.addEventListener('click',()=>{
   corazonRoto.classList.toggle("fa-heart-broken-active");
 })
 
-
