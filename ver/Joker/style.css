@@ -179,6 +179,12 @@ font-family: 'Glory', sans-serif;
   padding: 0px 0px;
   padding-bottom: 3px;
 }
+iframe{
+  display: block;
+  width: 100%;
+  height: 220px;
+  margin: auto;
+}
 .descripcion{
   width: 100%;
   height: 70px;
@@ -237,7 +243,7 @@ font-family: 'Glory', sans-serif;
 
 .descripcion__video{
   width: 100%;
-  height: 30px;
+  height: 27px;
   padding: 10px 1px;
   background-color: transparent;
   overflow: hidden;
@@ -245,22 +251,33 @@ font-family: 'Glory', sans-serif;
   
 }
 .descripcionActive{
-  height: 230px;
+  height: 330px;
 }
 .descripcion__video__subtitle{
   color: #9D7Ab0;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
+   font-family: 'Abel', sans-serif;
+font-family: 'Glory', sans-serif;
 }
 .descripcion__video__text{
   width: 100%;
-  height: 130px;
+  height: 200px;
   color: #9D7Ab0;
   margin: 15px 0;
+  padding: 0 8px;
+  overflow-y: scroll;
+  font-family: 'Abel', sans-serif;
+font-family: 'Glory', sans-serif;
+  font-size: 20px;
 }
 .descripcion__generos{
   width: 100%;
-  height: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  transform: translateY(10px);
 }
 .descripcion__generos__btn{
   border: none;
@@ -319,19 +336,16 @@ font-family: 'Glory', sans-serif;
     background-color: #4D3C56;
   }
 }
-video{
-  width: 100%;
-}
 .video1,.video2,.video3,.video4{
   width: 95%;
   height: 200px;
   margin: 10px auto;
   position: relative;
   overflow: hidden;
+  z-index: 120;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 120;
 }
 .video1::after{
   content: "";
@@ -340,30 +354,35 @@ video{
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgba(25, 23, 47, 0.85);
+  background-color:rgba(25,23,47,0.85);
+  /*rgba(53,21,68,0.77);*/
+  color: rgba(71, 32, 94, 0.7);
   backdrop-filter: blur(5px);
-  z-index: 1700;
+  z-index: 1600;
   opacity: 0;
   transition: .5s;
 }
 
+
 .video1:hover:after{
   opacity: 1;
 }
-.video1:hover .fa-play-circle{
-  transform: translate(-41.3vw, -11.9vh) scale(2);
-  color: #9D7Ab0;
-}
 .fa-play-circle{
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
   font-size: 40px;
-  color: #241246;
-  z-index: 1830;
+  z-index: 1756;
+  transform: scale(0);
   transition: .5s;
+  color: #9D7Ab0;
+  
 }
-.video__post {
+.video1:hover .fa-play-circle {
+  display: block;
+  transform: scale(2.0);
+}
+.video__post{
   width: 100%;
   height: 100%;
   display: block;
@@ -375,22 +394,117 @@ video{
 }
 .video__descripcion{
   width: 100%;
-  padding: 10px 5px;
+  height: 0;
+  padding: 0px 5px;
   position: absolute;
   bottom: 0;
   right: 0;
   background-color: rgba(17,16,25,0.47);
-  color: #aaa;
-  transform: translateY(100px);
   transition: .5s;
-  z-index: 1800;
+  z-index: 1700;
  font-family: 'Abel', sans-serif;
 font-family: 'Glory', sans-serif;
+display: flex;
+align-items: center;
+justify-content: space-between;
+overflow: hidden;
+}
+.video__title{
+  opacity: 0;
+  transition: .5s;
 }
 .video1:hover .video__descripcion{
-  transform: translateY(0%);
+  height: 35px;
   
 }
+.video1:hover .video__title{
+  opacity: 1;
+  color: #9D7Ab0;
+}
+.video__votos{
+  transform: translateY(100%);
+  display: none;
+  transition: .5s;
+}
+.video1:hover .video__votos{
+  transform: translateY(0%);
+  display: block;
+}
+.fa-star{
+  animation: stars 1s 1 forwards alternate;
+}
+/*video-1*/
+
+.una:nth-child(5){
+  color: slategray;
+}
+/*video-2*/
+.dos:nth-child(4){
+  color: slategray;
+}
+.dos:nth-child(5){
+  color: slategray;
+}
+/*video-3*/
+.tres:nth-child(5){
+  color: slategray;
+}
+/*video-4*/
+.cuatro:nth-child(3){
+  color: slategray;
+}
+.cuatro:nth-child(4){
+  color: slategray;
+}
+.cuatro:nth-child(5){
+  color: slategray;
+}
+/*video-6*/
+.seis:nth-child(4){
+  color: slategray;
+}
+.seis:nth-child(5) {
+  color: slategray;
+}
+/*video-7*/
+.siete:nth-child(2) {
+  color: slategray;
+}
+.siete:nth-child(3) {
+  color: slategray;
+}
+.siete:nth-child(4) {
+  color: slategray;
+}
+.siete:nth-child(5) {
+  color: slategray;
+}
+/*video-8*/
+.ocho:nth-child(4){
+  color: slategray;
+}
+.ocho:nth-child(5){
+  color: slategray;
+}
+/*video-9*/
+.nueve:nth-child(3){
+  color: slategray;
+}
+.nueve:nth-child(4){
+  color: slategray;
+}
+.nueve:nth-child(5){
+  color: slategray;
+}
+
+@keyframes stars{
+  to{
+    transform: rotate(360deg);
+    transition: .5s;
+  }
+}
+
+
 .footer {
   width: 100%;
   height: 100px;

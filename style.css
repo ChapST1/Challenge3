@@ -261,7 +261,6 @@ font-family: 'Glory', sans-serif;
   transition: .5s;
 }
 
-
 .video1:hover:after{
   opacity: 1;
 }
@@ -292,21 +291,114 @@ font-family: 'Glory', sans-serif;
 }
 .video__descripcion{
   width: 100%;
-  padding: 10px 5px;
+  height: 0;
+  padding: 0px 5px;
   position: absolute;
   bottom: 0;
   right: 0;
   background-color: rgba(17,16,25,0.47);
-  color: #aaa;
-  transform: translateY(100px);
   transition: .5s;
   z-index: 1700;
  font-family: 'Abel', sans-serif;
 font-family: 'Glory', sans-serif;
+display: flex;
+align-items: center;
+justify-content: space-between;
+overflow: hidden;
+}
+.video__title{
+  opacity: 0;
+  transition: .5s;
 }
 .video1:hover .video__descripcion{
-  transform: translateY(0%);
+  height: 35px;
   
+}
+.video1:hover .video__title{
+  opacity: 1;
+  color: #9D7Ab0;
+}
+.video__votos{
+  transform: translateY(100%);
+  display: none;
+  transition: .5s;
+}
+.video1:hover .video__votos{
+  transform: translateY(0%);
+  display: block;
+}
+.fa-star{
+  animation: stars 1s 1 forwards alternate;
+}
+/*video-1*/
+
+.una:nth-child(5){
+  color: slategray;
+}
+/*video-2*/
+.dos:nth-child(4){
+  color: slategray;
+}
+.dos:nth-child(5){
+  color: slategray;
+}
+/*video-3*/
+.tres:nth-child(5){
+  color: slategray;
+}
+/*video-4*/
+.cuatro:nth-child(3){
+  color: slategray;
+}
+.cuatro:nth-child(4){
+  color: slategray;
+}
+.cuatro:nth-child(5){
+  color: slategray;
+}
+/*video-6*/
+.seis:nth-child(4){
+  color: slategray;
+}
+.seis:nth-child(5) {
+  color: slategray;
+}
+/*video-7*/
+.siete:nth-child(2) {
+  color: slategray;
+}
+.siete:nth-child(3) {
+  color: slategray;
+}
+.siete:nth-child(4) {
+  color: slategray;
+}
+.siete:nth-child(5) {
+  color: slategray;
+}
+/*video-8*/
+.ocho:nth-child(4){
+  color: slategray;
+}
+.ocho:nth-child(5){
+  color: slategray;
+}
+/*video-9*/
+.nueve:nth-child(3){
+  color: slategray;
+}
+.nueve:nth-child(4){
+  color: slategray;
+}
+.nueve:nth-child(5){
+  color: slategray;
+}
+
+@keyframes stars{
+  to{
+    transform: rotate(360deg);
+    transition: .5s;
+  }
 }
 .footer{
   width: 100%;
